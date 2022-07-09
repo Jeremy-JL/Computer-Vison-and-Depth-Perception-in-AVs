@@ -11,24 +11,31 @@
     <div id="todo-list"></div>
 
     <script>
-      // Model
-      let todos = [
-        {
-          title: "Get Groceries",
-          dueDate: "2022 - 07 - 06",
-          id: "id1",
-        },
-        {
-          title: "Wash Car",
-          dueDate: "2022 - 07 - 06",
-          id: "id2",
-        },
-        {
-          title: "Make Dinner",
-          dueDate: "2022 - 07 - 07",
-          id: "id3",
-        },
-      ];
+      let todos;
+      const savedTodos = JSON.parse(localStorage.getItem("todos"));
+
+      //Model
+      if (Array.isArray(savedTodos)) {
+        todos = savedTodos;
+      } else {
+        todos = [
+          {
+            title: "Get Groceries",
+            dueDate: "2022 - 07 - 06",
+            id: "id1",
+          },
+          {
+            title: "Wash Car",
+            dueDate: "2022 - 07 - 06",
+            id: "id2",
+          },
+          {
+            title: "Make Dinner",
+            dueDate: "2022 - 07 - 07",
+            id: "id3",
+          },
+        ];
+      }
 
       render();
 
@@ -41,6 +48,8 @@
           dueDate: dueDate,
           id: id,
         });
+
+        saveTodos();
       }
 
       // Remove a Todo
@@ -52,6 +61,12 @@
             return true;
           }
         });
+
+        saveTodos();
+      }
+
+      function saveTodos() {
+        localStorage.setItem("todos", JSON.stringify(todos));
       }
 
       // View
