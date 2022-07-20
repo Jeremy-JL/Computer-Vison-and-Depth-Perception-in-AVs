@@ -3,8 +3,41 @@
 * {
   box-sizing: border-box;
   margin: 0;
+
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  background-image: url(https://images.pexels.com/photos/847402/pexels-photo-847402.jpeg?cs=srgb&dl=pexels-walid-ahmad-847402.jpg&fm=jpg);
+
+  background-size: cover;
+  background-position: center;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.days-container,
+.hours-container,
+.minutes-container,
+.seconds-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.numbers {
+  font-size: 10rem;
+  font-weight: 700;
+  margin: 1rem 2.5rem;
+}
+
+.units {
+  font-size: 1.5rem;
+  font-weight: 200;
 }
