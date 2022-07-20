@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+.application-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.application-card {
+  background-color: lightblue;
+  padding: 5px;
+}
