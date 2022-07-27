@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="/countdown-timer/countdown-timer.css" />
-    <script src="/countdown-timer/countdown-timer.js" defer></script>
+    <script src="/countdown-timer/countdown-form.js" defer></script>
 
     <title>Countdown Timer</title>
   </head>
@@ -16,12 +16,12 @@
         <h1 class="form-heading">Countdown Timer</h1>
 
         <div class="input-fields">
-          <input type="date" id="date-input" />
-          <input type="time" id="time-input" />
+          <input type="date" id="dateField" />
+          <input type="time" id="timeField" />
         </div>
 
         <div class="form-btns">
-          <button id="clear-btn">Clear</button>
+          <button id="clear-btn" onclick="clearInput()">Clear</button>
           <button id="start-btn" onclick="startTimer()">Start</button>
         </div>
       </div>
